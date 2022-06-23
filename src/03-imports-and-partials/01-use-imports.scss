@@ -1,0 +1,26 @@
+/*
+Importar archivos en sass
+
+Al igual que CSS, en sass es posible usar la directiva @import, sin embargo
+en sass esta directiva tiene un comportamiento mucho más cómodo en relación
+a las peticiones que serán necesarias realizar para la ejecución de la regla
+y es que mientras css establece la necesidad de realizar una nueva petición por
+HTTP para importar, sass directamente incluye el contenido en el archivo compilado
+*/
+
+// No se requiere especificar la extensión del archivo si es .scss o .sass
+@import './sass/reset';
+
+// Si se usan los partials, a diferencia de un archivo "normal" de sass, estos
+// no son compilados, los partials se definen prefijando un guion bajo al nombre
+// pero al importarlos, no se requiere poner el guion
+@import './partials/colors';
+
+* {
+  background-color: $bgColor;
+  color: $fontColor;
+}
+
+// También es posible importar archivos de css
+// Al importar archivos css, tampoco es necesario especificar la extensión del archivo
+@import './css/main';
