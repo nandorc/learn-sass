@@ -1,0 +1,29 @@
+/*
+Pasar variables a un mixin
+
+Es posible enviar valores a un mixin como variables para sobrescribir elementos
+que ya esten definidos, adicionalmente como en cualquier función, estas variables
+pueden tener valores predeterminados para el caso en que el mixin se use sin pasar
+parámetros
+*/
+
+@mixin importan-text($color: black) {
+  color: $color;
+  font-weight: bold;
+}
+
+.info-message {
+  @include importan-text(blue);
+}
+
+.danger-message {
+  @include importan-text(red);
+}
+
+.warning-message {
+  @include importan-text(yellow);
+}
+
+.generic-message {
+  @include importan-text;
+}

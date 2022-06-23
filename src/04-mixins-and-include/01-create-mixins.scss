@@ -1,0 +1,28 @@
+/*
+Mixins en sass
+
+Un mixin se puede considerar como una función, el un bloque de código reusable
+y parametrizable que se puede aplicar en otras reglas de sass mediante la 
+directiva @include
+*/
+
+@mixin important-text {
+  color: red;
+
+  font: {
+    weight: bold;
+    size: 1.25rem;
+  }
+}
+
+p.quote {
+  @include important-text;
+}
+
+// Si se añade alguna característica adicional al mixin que ya estuviera definida,
+// esta simplemente se añade a la regla, es decir que no sobrescribe los valores ya
+// definidos
+p.description {
+  @include important-text;
+  font-weight: 100;
+}
