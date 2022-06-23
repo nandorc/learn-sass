@@ -1,0 +1,24 @@
+/*
+Uso de la directiva !global
+
+El scope de las variables de sass se puede sobre escribir, para que cuando
+una variable sea declarada dentro de una regla de estilo, pueda hacer que su
+valor se comporte como valor global.
+*/
+
+$color: red;
+// Se requiere siempre que las variables tengan un valor inicial desde Dart Sass 2.0.0
+// De otro modo, si se usa !global y no se había declarado antes la variable, se genera un warning
+$font: null;
+
+h1 {
+    $color: green !global;
+    $font: "Helvetica" !global;
+    color: $color;
+}
+
+p {
+    // El valor para el color que tomaría, será el reasignado en la regla para el h1
+    color: $color;
+    font-family: $font;
+}

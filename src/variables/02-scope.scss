@@ -1,0 +1,21 @@
+/*
+Scope de las variables de sass
+
+Las variables de SASS "viven" desde donde nacen, si una variable es declarada dentro de una regla de estilo,
+su valor será valido solo dentro de esa regla de estilo.
+*/
+
+$color: red;
+
+h1 {
+    $color: green;
+    $font: "Helvetica";
+    color: $color;
+}
+
+p {
+    // El valor para el color que tomaría, sería el generado de manera global
+    color: $color;
+    // Descomentar la línea siguiente generaría un error dado que $font "vive" solo dentro de la regla definida para h1
+    // font-family: $font; 
+}

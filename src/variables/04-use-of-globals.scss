@@ -1,0 +1,14 @@
+/*
+Mejores practicas respecto a variables globales
+
+Al usar variables globales, estas se pueden declarar en un archivo llamado
+_globals.scss y posteriormente traidas a los archivos donde sean necesarias
+mediante la directiva @import
+*/
+
+@import './globals';
+
+p {
+    font-size: $baseFontSize;
+    color: $baseColor;
+}

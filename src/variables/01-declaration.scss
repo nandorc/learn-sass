@@ -1,0 +1,19 @@
+/*
+Declaración de variables 
+
+Las variables en SASS se definen mediante el simbolo de dolar ($). Se pueden almacenar:
+ - strings
+ - numbers
+ - colors
+ - booleans
+ - lists
+ - nulls
+
+Una vez compilado, en las reglas de estilo se almacena el valor "fijo" dado en la varibale.
+*/
+
+$color: #3f4f5f;
+
+.description {
+    background-color: $color;
+}
