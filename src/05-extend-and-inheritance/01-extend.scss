@@ -1,0 +1,26 @@
+/*
+Extensión de reglas de estilo
+
+Esta característica de sass permite tomar una regla de estilos como base y a partir
+de ella, generar otras reglas de estilo, lo cual simplifica la necesidad de 
+especificar más de un elemento en el atributo class de un componente
+*/
+
+.btn-basic {
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px 30px;
+  text-align: center;
+}
+
+.btn-report {
+  @extend .btn-basic;
+  background-color: red;
+}
+
+.btn-submit {
+  @extend .btn-basic;
+  background-color: green;
+  color: white;
+}
