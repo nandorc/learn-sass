@@ -1,0 +1,14 @@
+/*
+Anidar propiedades
+
+No solo las reglas de estilo se pueden anidar, es posible tambien anidar propiedades
+que correspondan al mismo prefijo
+*/
+
+p {
+    font: {
+        family: Helvetica, sans-serif;
+        size: 1.25rem;
+        weight: bold;
+    }
+}

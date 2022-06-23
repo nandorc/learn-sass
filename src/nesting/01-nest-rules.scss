@@ -1,0 +1,28 @@
+/*
+Anidar reglas de estilo
+
+Con sass es posible anidar las reglas de estilo de modo que estas puedan ser
+más reutilizables, además que permite que se integre con patrones de nombramiento
+como es el caso de BEM
+
+Una vez compilado, sass genera cuanta regla de estilo individual sea necesaria para
+corresponder con lo definido en el anidamiento.
+
+OJO: No se recomienda abusar del anidamiento, en esos casos es recomendable usar otras
+herramientas que proporciona sass para la inclusión y extensión de reglas.
+*/
+
+nav {
+    ul {
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+}
